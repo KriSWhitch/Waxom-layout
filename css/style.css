@@ -1,0 +1,165 @@
+.wrapper {
+  max-width: 1180px;
+  margin: auto;
+  position: relative;
+}
+
+.hero {
+  height: 1023px;
+  background: url(../img/hero-bg.jpg);
+}
+
+.header {
+  padding: 40px 0;
+  margin-bottom: 235px;
+}
+.header .wrapper {
+  display: flex;
+}
+.header .wrapper .header-logotype-link {
+  margin-right: 215px;
+}
+.header .wrapper .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+}
+.header .wrapper .navigation .navigation-link {
+  list-style: none;
+  margin-right: 30px;
+}
+.header .wrapper .navigation .navigation-link a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 13.5px;
+  line-height: 0;
+  letter-spacing: 0;
+}
+.header .wrapper .navigation .navigation-link .link-about-us {
+  color: #c7b299;
+}
+.header .wrapper .navigation .navigation-link:last-of-type {
+  margin-right: 30px;
+}
+.header .wrapper .header-buttons-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+}
+.header .wrapper .header-buttons-group .header-button {
+  list-style: none;
+}
+.header .wrapper .header-buttons-group .header-button:first-of-type {
+  margin-right: 30px;
+}
+
+.hero .slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero .slider .slider-wrapper > input {
+  display: none;
+}
+.hero .slider .slider-wrapper {
+  height: 350px;
+  margin: 0 auto 0;
+  position: relative;
+  width: 700px;
+}
+.hero .slider .slides {
+  height: inherit;
+  position: absolute;
+  width: inherit;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+}
+.hero .slider .slides .slide-pretitle {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 14px;
+}
+.hero .slider .slides .slide-title {
+  font-size: 52px;
+  font-weight: 800;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.hero .slider .slides .slide-subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 570px;
+  line-height: 24px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+.hero .slider .slides .slide-btn {
+  padding: 16px 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 5%;
+  background-color: #998675;
+  outline: none;
+  cursor: pointer;
+}
+.hero .slider .slider {
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  width: inherit;
+  margin-bottom: 245px;
+}
+.hero .left-arrow {
+  position: absolute;
+  left: 125px;
+}
+.hero .left-arrow .left-arrow-img {
+  height: 72px;
+  width: 72px;
+}
+.hero .right-arrow {
+  position: absolute;
+  right: 125px;
+}
+.hero .right-arrow .right-arrow-img {
+  height: 72px;
+  width: 72px;
+}
+.hero .controls {
+  width: fit-content;
+  margin: auto;
+  padding-right: 17.5px;
+  height: fit-content;
+}
+.hero .controls .radio-btn {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #999797;
+  color: #999797;
+  margin-left: 5px;
+}
+.hero .controls .radio-btn:checked {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 1px solid #d3c1ad;
+  border-radius: 100%;
+  background: transparent;
+  margin-left: 7.5px;
+  margin-right: 2.5px;
+}
+.hero .controls .radio-btn:first-of-type {
+  margin-left: 0;
+}
