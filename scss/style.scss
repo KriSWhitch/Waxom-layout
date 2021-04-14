@@ -58,7 +58,9 @@ $roboto: 'Roboto', sans-serif;
                     line-height: 0;
                     letter-spacing: 0;
                 }
-                .link-about-us {
+            }
+            .navigation-link:hover {
+                a {
                     color: #c7b299;
                 }
             }

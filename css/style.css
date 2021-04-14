@@ -58,7 +58,7 @@
   line-height: 0;
   letter-spacing: 0;
 }
-.header .wrapper .navigation .navigation-link .link-about-us {
+.header .wrapper .navigation .navigation-link:hover a {
   color: #c7b299;
 }
 .header .wrapper .navigation .navigation-link:last-of-type {
