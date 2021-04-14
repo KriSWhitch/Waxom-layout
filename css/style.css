@@ -409,8 +409,7 @@
 }
 
 .table-element-title {
-  margin-left: 28px;
-  margin-bottom: 5px;
+  margin: 0 0 5px 28px;
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -434,13 +433,14 @@
 }
 
 .element-lupa-icon {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%) contrast(105%);
   right: 150px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%) contrast(105%);
+  transform: scale(-1, 1);
 }
 
 .element-link-icon {
-  filter: invert(78%) sepia(9%) saturate(720%) hue-rotate(353deg) brightness(94%) contrast(85%);
   left: 140px;
+  filter: invert(78%) sepia(9%) saturate(720%) hue-rotate(353deg) brightness(94%) contrast(85%);
 }
 
 .table-element:hover .table-element-image {
@@ -458,4 +458,57 @@
 }
 .table-element:hover .element-icon {
   display: block;
+}
+
+.video-presentation {
+  padding: 210px 0 150px 0;
+  background: url(../img/hero-bg.jpg);
+}
+.video-presentation .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.video-play-btn {
+  margin-bottom: 35px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.video-play-btn .play-btn-image {
+  height: 64px;
+  width: 64px;
+  filter: invert(83%) sepia(100%) saturate(0%) hue-rotate(322deg) brightness(103%) contrast(103%);
+}
+
+.video-title {
+  margin: 0 0 20px 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #fff;
+}
+
+.video-subtitle {
+  margin: 0 0 23px 0;
+  max-width: 570px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #fff;
+}
+
+.video-timing {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #c7b299;
 }
