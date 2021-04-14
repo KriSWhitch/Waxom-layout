@@ -70,7 +70,7 @@
   margin-right: 30px;
 }
 .navigation-link a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 0;
@@ -116,7 +116,7 @@
   position: absolute;
   height: inherit;
   width: inherit;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "Arial", sans-serif;
   text-align: center;
   color: #fff;
 }
@@ -202,7 +202,7 @@
 }
 .services-list-element .services-element-title {
   margin-bottom: 20px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "Arial", sans-serif;
   font-weight: 600;
   font-size: 22px;
   color: #555555;
@@ -210,7 +210,7 @@
 .services-list-element .services-element-subtitle {
   max-width: 272px;
   margin-bottom: 24px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
@@ -245,7 +245,7 @@
 }
 .tagline .tagline-title {
   margin-bottom: 20px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "Arial", sans-serif;
   font-weight: 600;
   font-size: 30px;
   color: #555555;
@@ -253,7 +253,7 @@
 .tagline .tagline-subtitle {
   max-width: 770px;
   margin: auto auto 33px auto;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
@@ -297,7 +297,7 @@
 .purchase-text .purchase-title {
   margin-bottom: 8px;
   font-size: 28px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "Arial", sans-serif;
   letter-spacing: 0;
   color: #fff;
 }
@@ -307,7 +307,7 @@
 .purchase-text .purchase-subtitle {
   font-size: 18px;
   font-weight: 300;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   letter-spacing: 0;
   color: #615855;
 }
