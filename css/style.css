@@ -315,3 +315,147 @@
 .purchase-btn {
   padding: 16px 30px;
 }
+
+.projects {
+  padding: 70px 0 80px 0;
+}
+.projects .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  text-align: center;
+}
+
+.projects-title {
+  margin-bottom: 20px;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #555555;
+}
+
+.projects-subtitle {
+  max-width: 800px;
+  margin: auto auto 33px auto;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #8c8c8c;
+}
+
+.projects-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.projects-categories-element {
+  list-style: none;
+}
+.projects-categories-element button {
+  margin-right: 10px;
+  padding: 7px 25px;
+  color: #8c8c8c;
+  background-color: transparent;
+  border: 1px solid #8c8c8c;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.projects-categories-element:hover {
+  list-style: none;
+}
+.projects-categories-element:hover button {
+  color: #fff;
+  background-color: #736357;
+  border: 1px solid #736357;
+}
+
+.projects-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.table-element {
+  cursor: pointer;
+  margin: 0 17px 30px 17px;
+  list-style: none;
+}
+
+.table-element-wrapper {
+  position: relative;
+}
+
+.table-element-image {
+  height: 240px;
+  width: 370px;
+  background: url(../img/hero-bg.jpg);
+  background-size: cover;
+}
+
+.table-element-text {
+  padding: 25px 0;
+  text-align: left;
+  background: #fbfaf8;
+}
+
+.table-element-title {
+  margin-left: 28px;
+  margin-bottom: 5px;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #c7b299;
+}
+
+.table-element-subtitle {
+  margin-left: 28px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #e2e2e1;
+}
+
+.element-icon {
+  position: absolute;
+  top: 100px;
+  display: none;
+  height: 25px;
+  width: 25px;
+}
+
+.element-lupa-icon {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%) contrast(105%);
+  right: 150px;
+}
+
+.element-link-icon {
+  filter: invert(78%) sepia(9%) saturate(720%) hue-rotate(353deg) brightness(94%) contrast(85%);
+  left: 140px;
+}
+
+.table-element:hover .table-element-image {
+  background: linear-gradient(180deg, rgba(21, 24, 36, 0.4) 100%, #151824 100%), url(../img/hero-bg.jpg);
+  background-size: cover;
+}
+.table-element:hover .table-element-text {
+  background: #362f2d;
+}
+.table-element:hover .table-element-title {
+  color: #fff;
+}
+.table-element:hover .table-element-subtitle {
+  color: #c7b299;
+}
+.table-element:hover .element-icon {
+  display: block;
+}
