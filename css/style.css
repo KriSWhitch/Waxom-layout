@@ -9,6 +9,21 @@
   position: relative;
 }
 
+.btn-template {
+  padding: 16px 40px;
+  border: 0;
+  border-bottom: 3px solid #736357;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 5px;
+  background-color: #998675;
+  outline: none;
+  cursor: pointer;
+}
+
 .hero {
   height: 1023px;
   background: url(../img/hero-bg.jpg);
@@ -104,18 +119,6 @@
   line-height: 24px;
   margin: auto;
   margin-bottom: 32px;
-}
-.hero .slider .slides .slide-btn {
-  padding: 16px 40px;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 800;
-  border-radius: 5%;
-  background-color: #998675;
-  outline: none;
-  cursor: pointer;
 }
 .hero .slider .slider {
   height: inherit;
@@ -272,4 +275,36 @@
   bottom: 0;
   height: 400px;
   width: 770px;
+}
+
+.text-boxes {
+  padding: 48px 0;
+  background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+}
+.text-boxes .wrapper {
+  display: flex;
+  align-items: center;
+}
+.text-boxes .wrapper .purchase-text {
+  margin-right: 460px;
+}
+.text-boxes .wrapper .purchase-text .purchase-title {
+  font-size: 28px;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.text-boxes .wrapper .purchase-text .purchase-title .title-span {
+  color: #c7b299;
+}
+.text-boxes .wrapper .purchase-text .purchase-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0;
+  color: #615855;
+}
+.text-boxes .wrapper .purchase-btn {
+  padding: 16px 30px;
 }
