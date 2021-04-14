@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .wrapper {
   max-width: 1180px;
   margin: auto;
@@ -32,7 +37,7 @@
 .header .wrapper .navigation .navigation-link a {
   text-decoration: none;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 13.5px;
   line-height: 0;
@@ -78,7 +83,7 @@
   width: inherit;
   text-align: center;
   color: #ffffff;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 .hero .slider .slides .slide-pretitle {
   font-size: 36px;
@@ -162,4 +167,109 @@
 }
 .hero .controls .radio-btn:first-of-type {
   margin-left: 0;
+}
+
+.services {
+  padding: 80px 0;
+}
+.services .services-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services .services-list .services-list-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.services .services-list .services-list-element .element-icon {
+  filter: invert(32%) sepia(13%) saturate(15%) hue-rotate(329deg) brightness(91%) contrast(85%);
+  height: 45px;
+  width: 45px;
+  margin-bottom: 30px;
+}
+.services .services-list .services-list-element .element-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #555555;
+  margin-bottom: 20px;
+}
+.services .services-list .services-list-element .element-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #8c8c8c;
+  max-width: 272px;
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+.services .services-list .services-list-element .element-line {
+  height: 3px;
+  width: 70px;
+  background-color: #f1eee9;
+}
+.services .services-list .services-list-element:hover .element-icon {
+  filter: invert(84%) sepia(6%) saturate(1145%) hue-rotate(353deg) brightness(88%) contrast(83%);
+}
+.services .services-list .services-list-element:hover .element-title {
+  color: #c7b299;
+}
+.services .services-list .services-list-element:hover .element-subtitle {
+  color: #8c8c8c;
+}
+.services .services-list .services-list-element:hover .element-line {
+  background-color: #c7b299;
+}
+
+.tagline {
+  padding-top: 71px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fbfaf8;
+  position: relative;
+}
+.tagline .tagline-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #555555;
+}
+.tagline .tagline-subtitle {
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 33px;
+  max-width: 770px;
+  color: #8c8c8c;
+}
+.tagline .tagline-browser-center {
+  background-color: black;
+  margin: auto;
+  height: 480px;
+  width: 770px;
+}
+.tagline .tagline-browser-left {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: -34px;
+  bottom: 0;
+  height: 400px;
+  width: 770px;
+}
+.tagline .tagline-browser-right {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  right: -17px;
+  bottom: 0;
+  height: 400px;
+  width: 770px;
 }
