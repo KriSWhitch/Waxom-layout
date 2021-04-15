@@ -844,6 +844,10 @@
   padding-left: 5px;
 }
 
+.footer-about-link:hover {
+  color: #c7b299;
+}
+
 .footer-posts-title,
 .footer-twitter-title,
 .footer-widget-title {
