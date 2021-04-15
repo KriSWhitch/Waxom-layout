@@ -1394,6 +1394,17 @@ $background-gradient: linear-gradient(
     height: 500px;
   }
 
+  .services-list-element{
+    width: 100%;
+    .services-element-subtitle {
+      max-width: 340px;
+    }
+  }
+
+  .services-list-element:nth-of-type(2) {
+    margin-bottom: 0;
+  }
+
   .posts-element-image,
   .table-element-image {
     width: 100%;
@@ -1447,7 +1458,8 @@ $background-gradient: linear-gradient(
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 360px) {
+
   .logos-list-element {
     width: 100%;
     display: flex;
