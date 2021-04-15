@@ -160,6 +160,10 @@ $background-gradient: linear-gradient(
 
 .slides {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: inherit;
   width: inherit;
   font-family: $raleway;
@@ -176,7 +180,7 @@ $background-gradient: linear-gradient(
     font-weight: 800;
   }
   .slide-subtitle {
-    margin: auto auto 32px auto;
+    margin: 0 0 32px 0;
     font-size: 16px;
     font-weight: 300;
     max-width: 570px;
@@ -1035,6 +1039,7 @@ $background-gradient: linear-gradient(
 }
 
 .copyright-list-element {
+  text-align: center;
   a {
     font-family: $motserrat;
     font-weight: 300;
@@ -1086,6 +1091,23 @@ $background-gradient: linear-gradient(
     }
   }
 
+  .slider-wrapper {
+    width: 100%;
+  }
+
+  .hero {
+    height: 800px;
+    .slider {
+      .slider {
+        margin-bottom: 150px;
+      }
+    }
+  }
+
+  .header {
+    margin-bottom: 100px;
+  }
+
   .left-arrow {
     left: 50px;
   }
@@ -1123,9 +1145,17 @@ $background-gradient: linear-gradient(
     margin: auto;
   }
 
+  .logos-list-element {
+    margin: 0 150px 55px 0;
+  }
+
   .logos-list-element,
   .footer-container-element {
     width: 35%;
+  }
+
+  .logos-list-element:nth-of-type(2) {
+    margin: 0;
   }
 
   .partners {
@@ -1184,6 +1214,19 @@ $background-gradient: linear-gradient(
 @media (max-width: 1000px) {
   .wrapper {
     max-width: 680px;
+  }
+
+  .hero {
+    height: 700px;
+    .slider {
+      .slider {
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  .header {
+    margin-bottom: 60px;
   }
 
   .header-navigation,
@@ -1260,5 +1303,70 @@ $background-gradient: linear-gradient(
   .footer-widget-element {
     margin: 0 20px 20px 0;
     width: 35%;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    margin: 0 5%;
+    max-width: 100%;
+  }
+
+  .services,
+  .tagline,
+  .text-boxes,
+  .projects,
+  .posts,
+  .footer-wrapper {
+    padding: 33px 0;
+  }
+
+  .video-presentation {
+    padding: 50px 0;
+  }
+
+  .tagline {
+    .tagline-subtitle {
+      margin-bottom: 0;
+    }
+  }
+
+  .tagline-browser-container,
+  .table-element:nth-of-type(3),
+  .table-element:nth-of-type(4) {
+    display: none;
+  }
+
+  .text-boxes {
+    .wrapper {
+      flex-direction: column;
+    }
+  }
+
+  .purchase-text {
+    margin: 0 0 20px 0;
+  }
+
+  .projects-categories {
+    flex-wrap: wrap;
+  }
+
+  .projects-categories-element {
+    button {
+      width: 250px;
+    }
+  }
+
+  .projects-categories-element {
+    margin-bottom: 20px;
+  }
+
+  .projects-categories-element:last-of-type {
+    display: none;
+  }
+
+  .mobile-title,
+  .mobile-subtitle {
+    text-align: center;
   }
 }
