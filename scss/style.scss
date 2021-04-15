@@ -63,6 +63,29 @@ $background-gradient: linear-gradient(
 .header-logotype-link {
   margin-right: 215px;
 }
+
+.mobile-button {
+  display: none;
+}
+
+.m-menu-button {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.menu-line {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  width: 24px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 40px;
+}
+
 .header-navigation {
   display: flex;
   justify-content: center;
@@ -1081,6 +1104,10 @@ $background-gradient: linear-gradient(
     }
   }
 
+  .purchase-text {
+    margin-right: 200px;
+  }
+
   .posts-list {
     flex-wrap: wrap;
   }
@@ -1096,7 +1123,8 @@ $background-gradient: linear-gradient(
     margin: auto;
   }
 
-  .logos-list-element {
+  .logos-list-element,
+  .footer-container-element {
     width: 35%;
   }
 
@@ -1106,10 +1134,6 @@ $background-gradient: linear-gradient(
 
   .footer-container {
     flex-wrap: wrap;
-
-    li {
-      width: 35%;
-    }
   }
 
   .footer-about,
@@ -1132,14 +1156,15 @@ $background-gradient: linear-gradient(
     margin-top: 0;
   }
 
-  .footer-posts-element-text {
-    max-width: 300px;
-    width: 300px;
-  }
-
+  .footer-posts-element-text,
   .footer-twitter-element-text {
     max-width: 300px;
-    width: 300px;
+    width: auto;
+  }
+
+  .footer-widget-element {
+    margin-right: 25px;
+    width: 35%;
   }
 
   .copyright-list-left {
@@ -1157,5 +1182,83 @@ $background-gradient: linear-gradient(
 }
 
 @media (max-width: 1000px) {
-  
+  .wrapper {
+    max-width: 680px;
+  }
+
+  .header-navigation,
+  .header-buttons-group,
+  .slider-arrow,
+  .tagline-browser-left,
+  .tagline-browser-right,
+  .table-element:nth-of-type(5),
+  .table-element:nth-of-type(6),
+  .advantages-list-element:nth-of-type(5),
+  .mobile-image {
+    display: none;
+  }
+
+  .mobile-button {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    display: block;
+    z-index: 500;
+  }
+
+  .services-list,
+  .advantages-list {
+    flex-wrap: wrap;
+  }
+
+  .services-list-element,
+  .advantages-list-element {
+    margin-bottom: 60px;
+    width: 40%;
+  }
+
+  .purchase-text {
+    margin-right: 50px;
+  }
+
+  .mobile {
+    padding: 20px 0;
+  }
+
+  .mobile-title {
+    margin-top: 0;
+  }
+
+  .mobile-list {
+    margin-left: 0;
+  }
+
+  .advantages {
+    padding-bottom: 0;
+  }
+
+  .advantages-list-element {
+    margin-right: 0;
+  }
+
+  .footer-container {
+    justify-content: center;
+    align-items: center;
+
+    .footer-container-element {
+      width: 75%;
+      margin: 25px 0;
+    }
+  }
+
+  .footer-about-subtitle {
+    margin-right: 0;
+    max-width: 600px;
+    width: auto;
+  }
+
+  .footer-widget-element {
+    margin: 0 20px 20px 0;
+    width: 35%;
+  }
 }
