@@ -28,6 +28,10 @@ $background-gradient: linear-gradient(
   color: $highlighting;
 }
 
+.light-highlight {
+  color: #959595;
+}
+
 .btn-template {
   padding: 16px 40px;
   border: 0;
@@ -435,8 +439,8 @@ $background-gradient: linear-gradient(
 .table-element-image {
   height: 240px;
   width: 370px;
-  background: url(../img/hero-bg.jpg);
-  background-size: cover;
+  background: black;
+  opacity: 0.95;
 }
 
 .table-element-text {
@@ -484,13 +488,7 @@ $background-gradient: linear-gradient(
 
 .table-element:hover {
   .table-element-image {
-    background: linear-gradient(
-        180deg,
-        rgba(21, 24, 36, 0.4) 100%,
-        #151824 100%
-      ),
-      url(../img/hero-bg.jpg);
-    background-size: cover;
+    opacity: 1;
   }
 
   .table-element-text {
@@ -549,8 +547,8 @@ $background-gradient: linear-gradient(
 }
 
 .video-subtitle {
-  margin: 0 0 23px 0;
   max-width: 570px;
+  margin: 0 0 23px 0;
   font-family: $motserrat;
   font-weight: 300;
   font-size: 16px;
@@ -694,8 +692,8 @@ $background-gradient: linear-gradient(
 }
 
 .posts-subtitle {
-  margin-bottom: 30px;
   max-width: 770px;
+  margin-bottom: 30px;
   font-family: $motserrat;
   font-weight: 300;
   font-size: 16px;
@@ -719,8 +717,8 @@ $background-gradient: linear-gradient(
 .posts-element-image {
   height: 220px;
   width: 370px;
-  background: url(../img/hero-bg.jpg);
-  background-size: cover;
+  background: black;
+  opacity: 0.95;
 }
 
 .posts-element-text {
@@ -797,13 +795,7 @@ $background-gradient: linear-gradient(
 
 .posts-list-element:hover {
   .posts-element-image {
-    background: linear-gradient(
-        180deg,
-        rgba(21, 24, 36, 0.4) 100%,
-        #151824 100%
-      ),
-      url(../img/hero-bg.jpg);
-    background-size: cover;
+    opacity: 1;
   }
 
   .posts-element-text {
@@ -832,7 +824,7 @@ $background-gradient: linear-gradient(
 }
 
 .partners {
-  padding: 135px 0;
+  padding: 134px 0 135px 0;
   background: url(../img/partners-bg.jpg);
 }
 
@@ -849,4 +841,187 @@ $background-gradient: linear-gradient(
 
 .logos-list-element:last-of-type {
   margin: 0;
+}
+
+.footer-wrapper {
+  padding: 80px 0 60px 0;
+  background: #191919;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.footer-about,
+.footer-posts,
+.footer-twitter {
+  margin-right: 30px;
+}
+
+.footer-posts,
+.footer-twitter,
+.footer-widget {
+  margin-top: 25px;
+}
+
+.footer-about-logo {
+  margin-bottom: 25px;
+}
+
+.footer-about-subtitle {
+  width: 270px;
+  margin-bottom: 20px;
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 14px;
+  word-wrap: break-word;
+  line-height: 24px;
+  color: $titles;
+}
+
+.footer-about-link {
+  font-family: $motserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d1d1d1;
+  text-decoration: none;
+}
+
+.footer-about-link::after {
+  content: "►";
+  padding-left: 5px;
+}
+
+.footer-posts-title,
+.footer-twitter-title,
+.footer-widget-title {
+  margin-bottom: 30px;
+  font-family: $raleway;
+  font-weight: bold;
+  font-size: 24px;
+  color: $white;
+}
+
+.footer-posts-element,
+.footer-twitter-element,
+.footer-widget-element {
+  list-style: none;
+}
+
+.footer-posts-element-date,
+.footer-twitter-element-date {
+  margin-bottom: 10px;
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 12px;
+  color: #363636;
+}
+
+.footer-posts-element-text,
+.footer-twitter-element-text {
+  max-width: 270px;
+  margin-bottom: 20px;
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 14px;
+  color: $titles;
+}
+
+.footer-posts-element-line,
+.footer-twitter-element-line {
+  display: inline-block;
+  height: 1px;
+  width: 270px;
+  margin-bottom: 20px;
+  background-color: #252525;
+}
+
+.footer-posts-element:hover {
+  cursor: pointer;
+
+  .footer-posts-element-date {
+    color: $white;
+  }
+  .footer-posts-element-text {
+    color: $highlighting;
+  }
+}
+
+.footer-twitter-element-date {
+  margin-bottom: 20px;
+}
+
+.footer-twitter-element-text {
+  margin-bottom: 10px;
+
+  .text-link {
+    color: #06b7e9;
+    text-decoration: none;
+  }
+}
+
+.footer-widget-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-widget-element {
+  margin: 0 10px 10px 0;
+}
+
+.copyright {
+  padding: 45px 0;
+  background: #111111;
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.copyright-list-left,
+.copyright-list-right {
+  display: flex;
+}
+.copyright-list-left {
+  margin-right: 400px;
+}
+
+.copyrights,
+.copyright-list-element {
+  margin-right: 12px;
+  margin-bottom: 20px;
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 13px;
+  color: $titles;
+  list-style: none;
+}
+
+.copyright-list-element {
+  a {
+    font-family: $motserrat;
+    font-weight: 300;
+    font-size: 13px;
+    color: $titles;
+    text-decoration: none;
+  }
+}
+
+.copyright-list-element:before {
+  content: "|";
+  padding-right: 12px;
+}
+.copyright-list-element:hover a {
+  color: $highlighting;
+}
+.copyright-list-element:hover:before a {
+  color: $titles;
+}
+
+.copyright-list-right {
+  .copyright-list-element:first-of-type::before {
+    content: none;
+  }
 }
