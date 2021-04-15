@@ -637,6 +637,7 @@ $background-gradient: linear-gradient(
   justify-content: center;
   align-items: center;
   margin-right: 100px;
+  text-align: center;
   list-style: none;
 }
 .advantages-list-element:last-of-type {
@@ -716,7 +717,6 @@ $background-gradient: linear-gradient(
 
 .posts-element-image {
   height: 220px;
-  width: 370px;
   background: black;
   opacity: 0.95;
 }
@@ -737,6 +737,7 @@ $background-gradient: linear-gradient(
 
 .posts-element-subtitle {
   margin-bottom: 20px;
+  max-width: 345px;
   font-family: $motserrat;
   font-weight: 300;
   font-size: 14px;
@@ -850,6 +851,13 @@ $background-gradient: linear-gradient(
   .wrapper {
     display: flex;
     justify-content: center;
+  }
+}
+
+.footer-container {
+  display: flex;
+  li {
+    list-style: none;
   }
 }
 
@@ -1028,4 +1036,126 @@ $background-gradient: linear-gradient(
   .copyright-list-element:first-of-type::before {
     content: none;
   }
+}
+
+@media (max-width: 1280px) {
+  .wrapper {
+    max-width: 960px;
+  }
+
+  .header-logotype-link {
+    margin: 0 150px 0 40px;
+  }
+
+  .header-navigation {
+    flex-wrap: wrap;
+    width: 450px;
+  }
+
+  .navigation-link {
+    width: 15%;
+  }
+
+  .header-buttons-group {
+    flex-direction: column;
+    .header-button:first-of-type {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  .left-arrow {
+    left: 50px;
+  }
+
+  .right-arrow {
+    right: 50px;
+  }
+
+  .tagline {
+    .tagline-browser-left {
+      right: 85px;
+    }
+
+    .tagline-browser-right {
+      left: 70px;
+    }
+  }
+
+  .posts-list {
+    flex-wrap: wrap;
+  }
+
+  .posts-list-element:last-of-type {
+    display: none;
+  }
+
+  .partners-logos-list {
+    width: 600px;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: auto;
+  }
+
+  .logos-list-element {
+    width: 35%;
+  }
+
+  .partners {
+    padding: 34px 0 35px 0;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+
+    li {
+      width: 35%;
+    }
+  }
+
+  .footer-about,
+  .footer-widget {
+    order: 1;
+    margin-bottom: 50px;
+  }
+
+  .footer-about,
+  .footer-posts {
+    margin: 0 100px 0 100px;
+  }
+
+  .footer-posts,
+  .footer-twitter {
+    order: 2;
+  }
+
+  .footer-twitter {
+    margin-top: 0;
+  }
+
+  .footer-posts-element-text {
+    max-width: 300px;
+    width: 300px;
+  }
+
+  .footer-twitter-element-text {
+    max-width: 300px;
+    width: 300px;
+  }
+
+  .copyright-list-left {
+    flex-wrap: wrap;
+    margin: 0 50px 0 100px;
+  }
+
+  .copyrights {
+    width: 100%;
+  }
+
+  .copyright-list-element:before {
+    content: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  
 }
