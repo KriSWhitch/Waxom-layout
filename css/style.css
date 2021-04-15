@@ -461,8 +461,8 @@
 }
 
 .video-presentation {
-  padding: 210px 0 150px 0;
-  background: url(../img/hero-bg.jpg);
+  padding: 210px 0 200px 0;
+  background: url(../img/video-bg.jpg);
 }
 .video-presentation .wrapper {
   display: flex;
@@ -511,4 +511,59 @@
   font-size: 14px;
   line-height: 24px;
   color: #c7b299;
+}
+
+.mobile {
+  padding-top: 70px;
+  background: #fbfaf8;
+}
+.mobile .wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-image {
+  margin-right: 50px;
+}
+
+.mobile-title {
+  margin: 120px 0 30px 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #555555;
+}
+
+.mobile-subtitles {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #8c8c8c;
+}
+
+.mobile-subtitle {
+  margin: 0 0 23px 0;
+  max-width: 670px;
+}
+
+.mobile-list {
+  margin-left: 50px;
+}
+
+.mobile-list-element {
+  margin: 0 0 5px 0;
+  color: #8c8c8c;
+  list-style: none;
+}
+
+.mobile-list-element::before {
+  height: 21px;
+  width: 21px;
+  padding: 0 30px 3px 0;
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+  background-image: url(../img/mobile-list-icon.png);
+  background-repeat: no-repeat;
 }

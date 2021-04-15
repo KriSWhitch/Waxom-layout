@@ -11,6 +11,7 @@ $white: #fff;
 $highlighting: #c7b299;
 $subtitles: #8c8c8c;
 $titles: #555555;
+$background-light: #fbfaf8;
 
 .wrapper {
   position: relative;
@@ -259,7 +260,7 @@ $titles: #555555;
   align-items: center;
   text-align: center;
   padding-top: 71px;
-  background-color: #fbfaf8;
+  background-color: $background-light;
 
   .tagline-title {
     margin-bottom: 20px;
@@ -432,7 +433,7 @@ $titles: #555555;
 .table-element-text {
   padding: 25px 0;
   text-align: left;
-  background: #fbfaf8;
+  background: $background-light;
 }
 
 .table-element-title {
@@ -501,8 +502,8 @@ $titles: #555555;
 }
 
 .video-presentation {
-  padding: 210px 0 150px 0;
-  background: url(../img/hero-bg.jpg);
+  padding: 210px 0 200px 0;
+  background: url(../img/video-bg.jpg);
 
   .wrapper {
     display: flex;
@@ -554,4 +555,60 @@ $titles: #555555;
   font-size: 14px;
   line-height: 24px;
   color: $highlighting;
+}
+
+.mobile {
+  padding-top: 70px;
+  background: $background-light;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.mobile-image {
+  margin-right: 50px;
+}
+
+.mobile-title {
+  margin: 120px 0 30px 0;
+  font-family: $raleway;
+  font-weight: 600;
+  font-size: 30px;
+  color: $titles;
+}
+
+.mobile-subtitles {
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: $subtitles;
+}
+
+.mobile-subtitle {
+  margin: 0 0 23px 0;
+  max-width: 670px;
+}
+
+.mobile-list {
+  margin-left: 50px;
+}
+
+.mobile-list-element {
+  margin: 0 0 5px 0;
+  color: $subtitles;
+  list-style: none;
+}
+
+.mobile-list-element::before {
+  height: 21px;
+  width: 21px;
+  padding: 0 30px 3px 0;
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+  background-image: url(../img/mobile-list-icon.png);
+  background-repeat: no-repeat;
 }
