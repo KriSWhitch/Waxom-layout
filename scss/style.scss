@@ -12,7 +12,11 @@ $highlighting: #c7b299;
 $subtitles: #8c8c8c;
 $titles: #555555;
 $background-light: #fbfaf8;
-$background-gradient: linear-gradient(90deg,rgba(33, 27, 25, 1) 0%,rgba(78, 52, 39, 1) 100%);
+$background-gradient: linear-gradient(
+  90deg,
+  rgba(33, 27, 25, 1) 0%,
+  rgba(78, 52, 39, 1) 100%
+);
 
 .wrapper {
   position: relative;
@@ -279,27 +283,35 @@ $background-gradient: linear-gradient(90deg,rgba(33, 27, 25, 1) 0%,rgba(78, 52, 
     line-height: 28px;
     color: $subtitles;
   }
-  .tagline-browser-center {
+  .tagline-browser-container {
+    position: relative;
     height: 480px;
     width: 770px;
     margin: auto;
-    background-color: black;
+  }
+  .tagline-browser-center {
+    position: absolute;
+    height: 480px;
+    width: 770px;
+    margin: auto;
+    background: url(../img/browser-center.png);
+    z-index: 10;
   }
   .tagline-browser-left {
     position: absolute;
-    left: 330px;
+    right: 240px;
     bottom: 0;
     height: 400px;
     width: 770px;
-    background-color: rgba(black, 0.5);
+    background: url(../img/browser-left.png);
   }
   .tagline-browser-right {
     position: absolute;
-    right: 340px;
+    left: 220px;
     bottom: 0;
     height: 400px;
     width: 770px;
-    background-color: rgba(black, 0.4);
+    background: url(../img/browser-right.png);
   }
 }
 
@@ -634,10 +646,11 @@ $background-gradient: linear-gradient(90deg,rgba(33, 27, 25, 1) 0%,rgba(78, 52, 
 }
 
 .list-element-image {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .list-element-number {
+  margin-bottom: 5px;
   font-family: $motserrat;
   font-weight: 300;
   font-size: 48px;
@@ -650,6 +663,7 @@ $background-gradient: linear-gradient(90deg,rgba(33, 27, 25, 1) 0%,rgba(78, 52, 
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;
+  text-transform: uppercase;
   color: $highlighting;
 }
 
@@ -657,4 +671,162 @@ $background-gradient: linear-gradient(90deg,rgba(33, 27, 25, 1) 0%,rgba(78, 52, 
   height: 2px;
   width: 30px;
   background-color: $white;
+}
+
+.posts {
+  padding: 75px 0;
+  text-align: center;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.posts-title {
+  margin-bottom: 20px;
+  font-family: $raleway;
+  font-weight: 600;
+  font-size: 30px;
+  color: $titles;
+}
+
+.posts-subtitle {
+  margin-bottom: 30px;
+  max-width: 770px;
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: $subtitles;
+}
+
+.posts-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts-list-element {
+  position: relative;
+  cursor: pointer;
+  margin: 0 17px 45px 17px;
+  list-style: none;
+}
+
+.posts-element-image {
+  height: 220px;
+  width: 370px;
+  background: url(../img/hero-bg.jpg);
+  background-size: cover;
+}
+
+.posts-element-text {
+  padding: 25px 0 25px 28px;
+  text-align: left;
+  background: $background-light;
+}
+
+.posts-element-title {
+  margin: 0 0 15px 0;
+  font-family: $raleway;
+  font-weight: 600;
+  font-size: 20px;
+  color: $titles;
+}
+
+.posts-element-subtitle {
+  margin-bottom: 20px;
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: $subtitles;
+}
+
+.posts-element-link {
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 14px;
+  color: $highlighting;
+  text-decoration: none;
+}
+
+.posts-element-link::after {
+  content: "►";
+  padding-left: 5px;
+}
+
+.posts-element-date {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
+
+.date-header {
+  padding: 7px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  background: #363636;
+
+  .date-title {
+    font-family: $motserrat;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 20px;
+    color: $white;
+  }
+}
+
+.date-body {
+  padding: 4px 14px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  background: #252525;
+
+  .date-subtitle {
+    font-family: $roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: $white;
+  }
+}
+
+.posts-list-element:hover {
+  .posts-element-image {
+    background: linear-gradient(
+        180deg,
+        rgba(21, 24, 36, 0.4) 100%,
+        #151824 100%
+      ),
+      url(../img/hero-bg.jpg);
+    background-size: cover;
+  }
+
+  .posts-element-text {
+    background: #362f2d;
+  }
+
+  .posts-element-title {
+    color: $highlighting;
+  }
+
+  .posts-element-subtitle {
+    color: $white;
+  }
+
+  .date-header {
+    background: $highlighting;
+  }
+
+  .date-body {
+    background: #a48d72;
+  }
+}
+
+.controls-left-arrow {
+  margin-right: 5px;
 }
