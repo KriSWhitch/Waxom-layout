@@ -12,6 +12,7 @@ $highlighting: #c7b299;
 $subtitles: #8c8c8c;
 $titles: #555555;
 $background-light: #fbfaf8;
+$background-gradient: linear-gradient(90deg,rgba(33, 27, 25, 1) 0%,rgba(78, 52, 39, 1) 100%);
 
 .wrapper {
   position: relative;
@@ -304,11 +305,7 @@ $background-light: #fbfaf8;
 
 .text-boxes {
   padding: 48px 0;
-  background: linear-gradient(
-    90deg,
-    rgba(33, 27, 25, 1) 0%,
-    rgba(78, 52, 39, 1) 100%
-  );
+  background: $background-gradient;
 
   .wrapper {
     display: flex;
@@ -611,4 +608,53 @@ $background-light: #fbfaf8;
   vertical-align: middle;
   background-image: url(../img/mobile-list-icon.png);
   background-repeat: no-repeat;
+}
+
+.advantages {
+  padding: 60px 0;
+  background: $background-gradient;
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages-list-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  list-style: none;
+}
+.advantages-list-element:last-of-type {
+  margin: 0;
+}
+
+.list-element-image {
+  margin-bottom: 30px;
+}
+
+.list-element-number {
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 48px;
+  color: $white;
+}
+
+.list-element-subtitle {
+  margin-bottom: 27px;
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: $highlighting;
+}
+
+.list-element-line {
+  height: 2px;
+  width: 30px;
+  background-color: $white;
 }

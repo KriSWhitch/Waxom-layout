@@ -567,3 +567,53 @@
   background-image: url(../img/mobile-list-icon.png);
   background-repeat: no-repeat;
 }
+
+.advantages {
+  padding: 60px 0;
+  background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages-list-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  list-style: none;
+}
+
+.advantages-list-element:last-of-type {
+  margin: 0;
+}
+
+.list-element-image {
+  margin-bottom: 30px;
+}
+
+.list-element-number {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 48px;
+  color: #fff;
+}
+
+.list-element-subtitle {
+  margin-bottom: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #c7b299;
+}
+
+.list-element-line {
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+}
