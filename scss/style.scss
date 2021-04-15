@@ -830,3 +830,23 @@ $background-gradient: linear-gradient(
 .controls-left-arrow {
   margin-right: 5px;
 }
+
+.partners {
+  padding: 135px 0;
+  background: url(../img/partners-bg.jpg);
+}
+
+.partners-logos-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos-list-element {
+  list-style: none;
+  margin-right: 90px;
+}
+
+.logos-list-element:last-of-type {
+  margin: 0;
+}
