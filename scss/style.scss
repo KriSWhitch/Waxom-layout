@@ -7,21 +7,67 @@ $motserrat: "Montserrat", "Arial", sans-serif;
 $raleway: "Raleway", "Arial", sans-serif;
 $roboto: "Roboto", "Arial", sans-serif;
 
-$white: #fff;
+$white: #ffffff;
 $highlighting: #c7b299;
+$highlighting-dark: #736357;
 $subtitles: #8c8c8c;
 $titles: #555555;
 $background-light: #fbfaf8;
+$black-light: #252525;
 $background-gradient: linear-gradient(
   90deg,
   rgba(33, 27, 25, 1) 0%,
   rgba(78, 52, 39, 1) 100%
 );
 
+@mixin titles-text {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-family: $raleway;
+  font-weight: 600;
+  color: $titles;
+}
+
+@mixin subtitles-text {
+  font-family: $motserrat;
+  font-weight: 300;
+  font-size: 14px;
+  color: $subtitles;
+}
+
+@mixin display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button,
+a {
+  text-decoration: none;
+}
+
+.margin-auto,
+.wrapper {
+  margin: auto;
+}
+
+.position-relative,
 .wrapper {
   position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+.wrapper {
   max-width: 1180px;
-  margin: auto;
 }
 
 .highlight {
@@ -32,19 +78,25 @@ $background-gradient: linear-gradient(
   color: #959595;
 }
 
+.white {
+  color: $white;
+}
+
 .btn-template {
   padding: 16px 40px;
-  border: 0;
   font-size: 14px;
   font-weight: 800;
-  color: $white;
   text-transform: uppercase;
-  text-decoration: none;
   background-color: #998675;
-  border-bottom: 3px solid #736357;
+  border: 0;
+  border-bottom: 3px solid $highlighting-dark;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+}
+
+.title-template {
+  @include titles-text;
 }
 
 .hero {
@@ -68,7 +120,7 @@ $background-gradient: linear-gradient(
   display: none;
 }
 
-.m-menu-button {
+.mobile-menu-button {
   padding: 5px;
   background-color: transparent;
   border: none;
@@ -78,97 +130,60 @@ $background-gradient: linear-gradient(
 
 .menu-line {
   display: block;
-  height: 3px;
-  background-color: #fff;
   width: 24px;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  height: 3px;
+  margin: 3px 0;
   border-radius: 40px;
+  background-color: $white;
 }
 
-.header-navigation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 0;
-}
-
+.header-navigation,
 .header-buttons-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-flex;
   padding-left: 0;
-  .header-button {
-    list-style: none;
-  }
-  .header-button:first-of-type {
-    margin-right: 30px;
-  }
+}
+
+.header-button:first-of-type,
+.navigation-link-container,
+.footer-about,
+.footer-posts,
+.footer-twitter {
+  margin-right: 30px;
 }
 
 .navigation-link {
-  list-style: none;
-  margin-right: 30px;
-  a {
-    font-family: $motserrat;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 0;
-    letter-spacing: 0;
-    color: $white;
-    text-decoration: none;
-  }
+  @include subtitles-text;
+  color: $white;
 }
 
 .navigation-link:hover {
-  a {
-    color: $highlighting;
-  }
+  color: $highlighting;
 }
 
-.navigation-link:last-of-type {
-  margin-right: 30px;
-}
-
-.hero {
-  .slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    .slider {
-      position: relative;
-      height: inherit;
-      width: inherit;
-      margin-bottom: 245px;
-      overflow: hidden;
-    }
-  }
-}
-
-.slider-wrapper > input {
-  display: none;
+.slider,
+.slider-container {
+  @include display-flex;
+  flex-direction: column;
 }
 
 .slider-wrapper {
   height: 350px;
   width: 700px;
   margin: 0 auto 0;
-  position: relative;
+}
+
+.slider-container {
+  height: inherit;
+  width: inherit;
+  margin-bottom: 245px;
+  overflow: hidden;
 }
 
 .slides {
-  position: absolute;
-  display: flex;
+  @include display-flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: inherit;
-  width: inherit;
   font-family: $raleway;
   text-align: center;
-  color: $white;
   .slide-pretitle {
     margin: 0 0 14px 0;
     font-size: 36px;
@@ -180,16 +195,12 @@ $background-gradient: linear-gradient(
     font-weight: 800;
   }
   .slide-subtitle {
+    max-width: 570px;
     margin: 0 0 32px 0;
     font-size: 16px;
     font-weight: 300;
-    max-width: 570px;
     line-height: 24px;
   }
-}
-
-.slider-arrow {
-  position: absolute;
 }
 
 .slider-arrow-img {
@@ -207,8 +218,6 @@ $background-gradient: linear-gradient(
 .slider-controls {
   height: fit-content;
   width: fit-content;
-  margin: auto;
-  padding-right: 18px;
   .radio-btn {
     width: 10px;
     height: 10px;
@@ -217,8 +226,6 @@ $background-gradient: linear-gradient(
   .radio-btn:checked {
     width: 15px;
     height: 15px;
-    margin-left: 8px;
-    margin-right: 3px;
   }
   .radio-btn:first-of-type {
     margin-left: 0;
@@ -227,45 +234,33 @@ $background-gradient: linear-gradient(
 
 .services {
   padding: 80px 0;
-
   .services-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-flex;
   }
 }
 
 .services-list-element {
-  display: flex;
+  @include display-flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-right: 30px;
   text-align: center;
   cursor: pointer;
-
   .services-element-icon {
-    height: 45px;
     width: 45px;
+    height: 45px;
     margin-bottom: 30px;
     filter: invert(32%) sepia(13%) saturate(15%) hue-rotate(329deg)
       brightness(91%) contrast(85%);
   }
   .services-element-title {
-    margin-bottom: 20px;
-    font-family: $raleway;
-    font-weight: 600;
+    @include titles-text;
     font-size: 22px;
-    color: $titles;
   }
   .services-element-subtitle {
+    @include subtitles-text;
     max-width: 272px;
     margin-bottom: 24px;
-    font-family: $motserrat;
-    font-weight: 300;
-    font-size: 14px;
     line-height: 24px;
-    color: $subtitles;
   }
   .services-element-line {
     height: 3px;
@@ -291,58 +286,34 @@ $background-gradient: linear-gradient(
 }
 
 .tagline {
-  position: relative;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding-top: 71px;
   background-color: $background-light;
-
-  .tagline-title {
-    margin-bottom: 20px;
-    font-family: $raleway;
-    font-weight: 600;
-    font-size: 30px;
-    color: $titles;
-  }
   .tagline-subtitle {
+    @include subtitles-text;
     max-width: 770px;
-    margin: auto auto 33px auto;
-    font-family: $motserrat;
-    font-weight: 300;
+    margin-bottom: 33px;
     font-size: 16px;
     line-height: 28px;
-    color: $subtitles;
   }
-  .tagline-browser-container {
-    position: relative;
+  .tagline-browser-container,
+  .tagline-browser-center {
     height: 480px;
     width: 770px;
-    margin: auto;
   }
   .tagline-browser-center {
-    position: absolute;
-    height: 480px;
-    width: 770px;
-    margin: auto;
     background: url(../img/browser-center.png);
     z-index: 10;
   }
   .tagline-browser-left {
-    position: absolute;
     right: 240px;
     bottom: 0;
-    height: 400px;
-    width: 770px;
-    background: url(../img/browser-left.png);
   }
   .tagline-browser-right {
-    position: absolute;
     left: 220px;
     bottom: 0;
-    height: 400px;
-    width: 770px;
-    background: url(../img/browser-right.png);
   }
 }
 
@@ -358,23 +329,15 @@ $background-gradient: linear-gradient(
 
 .purchase-text {
   margin-right: 460px;
-
   .purchase-title {
     margin-bottom: 8px;
     font-size: 28px;
     font-family: $raleway;
     letter-spacing: 0;
-    color: $white;
-
-    .title-span {
-      color: $highlighting;
-    }
   }
   .purchase-subtitle {
+    @include subtitles-text;
     font-size: 18px;
-    font-weight: 300;
-    font-family: $motserrat;
-    letter-spacing: 0;
     color: #615855;
   }
 }
@@ -385,70 +348,48 @@ $background-gradient: linear-gradient(
 .projects {
   padding: 70px 0 80px 0;
   .wrapper {
-    display: flex;
+    @include display-flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     max-width: 1300px;
     text-align: center;
   }
 }
 
-.projects-title {
-  margin-bottom: 20px;
-  font-family: $raleway;
-  font-weight: 600;
-  font-size: 30px;
-  color: $titles;
-}
-
 .projects-subtitle {
+  @include subtitles-text;
   max-width: 800px;
   margin: auto auto 33px auto;
-  font-family: $motserrat;
-  font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  color: $subtitles;
 }
 
 .projects-categories {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-flex;
   margin-bottom: 40px;
 }
 
-.projects-categories-element {
-  list-style: none;
-
-  button {
-    margin-right: 10px;
-    padding: 7px 25px;
-    color: $subtitles;
-    background-color: transparent;
-    border: 1px solid $subtitles;
-    border-radius: 2px;
-    text-decoration: none;
-    cursor: pointer;
-    outline: none;
-  }
+.categories-element-button {
+  margin-right: 10px;
+  padding: 7px 25px;
+  color: $subtitles;
+  background-color: transparent;
+  border: 1px solid $subtitles;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
 }
 
 .projects-categories-element:hover {
   list-style: none;
-
   button {
     color: $white;
-    background-color: #736357;
-    border: 1px solid #736357;
+    background-color: $highlighting-dark;
+    border: 1px solid $highlighting-dark;
   }
 }
 
 .projects-table {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
@@ -456,11 +397,6 @@ $background-gradient: linear-gradient(
 .table-element {
   cursor: pointer;
   margin: 0 17px 30px 17px;
-  list-style: none;
-}
-
-.table-element-wrapper {
-  position: relative;
 }
 
 .table-element-image {
@@ -481,26 +417,22 @@ $background-gradient: linear-gradient(
   font-family: $raleway;
   font-weight: 600;
   font-size: 20px;
-  color: $highlighting;
 }
 
 .table-element-subtitle {
+  @include subtitles-text;
   margin-left: 28px;
-  font-family: $motserrat;
-  font-weight: 300;
-  font-size: 14px;
   color: #e2e2e1;
 }
 
 .element-icon {
-  position: absolute;
   top: 100px;
   display: none;
   height: 25px;
   width: 25px;
 }
 
-.element-lupa-icon {
+.element-magnifier-icon {
   right: 150px;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%)
     contrast(105%);
@@ -540,23 +472,18 @@ $background-gradient: linear-gradient(
   background: url(../img/video-bg.jpg);
 
   .wrapper {
-    display: flex;
+    @include display-flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
   }
 }
 
 .video-play-btn {
+  @include display-flex;
   margin-bottom: 35px;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: rgba(black, 0.2);
   border-radius: 50%;
-
   .play-btn-image {
     height: 64px;
     width: 64px;
@@ -566,27 +493,23 @@ $background-gradient: linear-gradient(
 }
 
 .video-title {
-  margin: 0 0 20px 0;
-  font-family: $raleway;
+  @include titles-text;
   font-weight: 500;
-  font-size: 30px;
   color: $white;
 }
 
 .video-subtitle {
+  @include subtitles-text;
   max-width: 570px;
   margin: 0 0 23px 0;
-  font-family: $motserrat;
-  font-weight: 300;
   font-size: 16px;
   line-height: 28px;
   color: $white;
 }
 
 .video-timing {
-  font-family: $motserrat;
+  @include subtitles-text;
   font-weight: 400;
-  font-size: 14px;
   line-height: 24px;
   color: $highlighting;
 }
@@ -596,8 +519,7 @@ $background-gradient: linear-gradient(
   background: $background-light;
 
   .wrapper {
-    display: flex;
-    justify-content: center;
+    @include display-flex;
   }
 }
 
@@ -606,19 +528,14 @@ $background-gradient: linear-gradient(
 }
 
 .mobile-title {
+  @include titles-text;
   margin: 120px 0 30px 0;
-  font-family: $raleway;
-  font-weight: 600;
-  font-size: 30px;
-  color: $titles;
 }
 
-.mobile-subtitles {
-  font-family: $motserrat;
-  font-weight: 300;
+.mobile-text {
+  @include subtitles-text;
   font-size: 16px;
   line-height: 28px;
-  color: $subtitles;
 }
 
 .mobile-subtitle {
@@ -633,7 +550,6 @@ $background-gradient: linear-gradient(
 .mobile-list-element {
   margin: 0 0 5px 0;
   color: $subtitles;
-  list-style: none;
 }
 
 .mobile-list-element::before {
@@ -652,33 +568,28 @@ $background-gradient: linear-gradient(
   background: $background-gradient;
 }
 
-.advantages-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.advantages-list,
+.advantages-list-element {
+  @include display-flex;
 }
 
 .advantages-list-element {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-right: 100px;
   text-align: center;
-  list-style: none;
 }
 .advantages-list-element:last-of-type {
   margin: 0;
 }
 
-.list-element-image {
+.list-element-image,
+.footer-about-logo {
   margin-bottom: 25px;
 }
 
 .list-element-number {
+  @include subtitles-text;
   margin-bottom: 5px;
-  font-family: $motserrat;
-  font-weight: 300;
   font-size: 48px;
   color: $white;
 }
@@ -690,7 +601,6 @@ $background-gradient: linear-gradient(
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
-  color: $highlighting;
 }
 
 .list-element-line {
@@ -702,44 +612,27 @@ $background-gradient: linear-gradient(
 .posts {
   padding: 75px 0;
   text-align: center;
-
   .wrapper {
-    display: flex;
+    @include display-flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 
-.posts-title {
-  margin-bottom: 20px;
-  font-family: $raleway;
-  font-weight: 600;
-  font-size: 30px;
-  color: $titles;
-}
-
 .posts-subtitle {
+  @include subtitles-text;
   max-width: 770px;
   margin-bottom: 30px;
-  font-family: $motserrat;
-  font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  color: $subtitles;
 }
 
 .posts-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-flex;
 }
 
 .posts-list-element {
-  position: relative;
-  cursor: pointer;
   margin: 0 17px 45px 17px;
-  list-style: none;
+  cursor: pointer;
 }
 
 .posts-element-image {
@@ -755,29 +648,22 @@ $background-gradient: linear-gradient(
 }
 
 .posts-element-title {
+  @include titles-text;
   margin: 0 0 15px 0;
-  font-family: $raleway;
-  font-weight: 600;
   font-size: 20px;
-  color: $titles;
 }
 
 .posts-element-subtitle {
-  margin-bottom: 20px;
+  @include subtitles-text;
   max-width: 345px;
-  font-family: $motserrat;
-  font-weight: 300;
-  font-size: 14px;
+  margin-bottom: 20px;
   line-height: 22px;
-  color: $subtitles;
 }
 
 .posts-element-link {
   font-family: $motserrat;
   font-weight: 300;
   font-size: 14px;
-  color: $highlighting;
-  text-decoration: none;
 }
 
 .posts-element-link::after {
@@ -786,7 +672,6 @@ $background-gradient: linear-gradient(
 }
 
 .posts-element-date {
-  position: absolute;
   top: 20px;
   left: 16px;
 }
@@ -796,10 +681,8 @@ $background-gradient: linear-gradient(
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
   background: #363636;
-
   .date-title {
-    font-family: $motserrat;
-    font-weight: 300;
+    @include subtitles-text;
     font-size: 24px;
     line-height: 20px;
     color: $white;
@@ -810,7 +693,7 @@ $background-gradient: linear-gradient(
   padding: 4px 14px;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  background: #252525;
+  background: $black-light;
 
   .date-subtitle {
     font-family: $roboto;
@@ -825,23 +708,18 @@ $background-gradient: linear-gradient(
   .posts-element-image {
     opacity: 1;
   }
-
   .posts-element-text {
     background: #362f2d;
   }
-
   .posts-element-title {
     color: $highlighting;
   }
-
   .posts-element-subtitle {
     color: $white;
   }
-
   .date-header {
     background: $highlighting;
   }
-
   .date-body {
     background: #a48d72;
   }
@@ -857,13 +735,10 @@ $background-gradient: linear-gradient(
 }
 
 .partners-logos-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-flex;
 }
 
 .logos-list-element {
-  list-style: none;
   margin-right: 90px;
 }
 
@@ -874,11 +749,6 @@ $background-gradient: linear-gradient(
 .footer-wrapper {
   padding: 80px 0 60px 0;
   background: #191919;
-
-  .wrapper {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 .footer-container {
@@ -888,40 +758,26 @@ $background-gradient: linear-gradient(
   }
 }
 
-.footer-about,
-.footer-posts,
-.footer-twitter {
-  margin-right: 30px;
-}
-
 .footer-posts,
 .footer-twitter,
 .footer-widget {
   margin-top: 25px;
 }
 
-.footer-about-logo {
-  margin-bottom: 25px;
-}
-
 .footer-about-subtitle {
+  @include subtitles-text;
   width: 270px;
   margin-bottom: 20px;
-  font-family: $motserrat;
-  font-weight: 300;
-  font-size: 14px;
   word-wrap: break-word;
   line-height: 24px;
   color: $titles;
 }
 
 .footer-about-link {
-  font-family: $motserrat;
+  @include subtitles-text;
   font-weight: 400;
-  font-size: 14px;
   line-height: 20px;
   color: #d1d1d1;
-  text-decoration: none;
 }
 
 .footer-about-link::after {
@@ -940,31 +796,21 @@ $background-gradient: linear-gradient(
   font-family: $raleway;
   font-weight: bold;
   font-size: 24px;
-  color: $white;
-}
-
-.footer-posts-element,
-.footer-twitter-element,
-.footer-widget-element {
-  list-style: none;
 }
 
 .footer-posts-element-date,
 .footer-twitter-element-date {
+  @include subtitles-text;
   margin-bottom: 10px;
-  font-family: $motserrat;
-  font-weight: 300;
   font-size: 12px;
   color: #363636;
 }
 
 .footer-posts-element-text,
 .footer-twitter-element-text {
+  @include subtitles-text;
   max-width: 270px;
   margin-bottom: 20px;
-  font-family: $motserrat;
-  font-weight: 300;
-  font-size: 14px;
   color: $titles;
 }
 
@@ -974,7 +820,7 @@ $background-gradient: linear-gradient(
   height: 1px;
   width: 270px;
   margin-bottom: 20px;
-  background-color: #252525;
+  background-color: $black-light;
 }
 
 .footer-posts-element:hover {
@@ -994,10 +840,8 @@ $background-gradient: linear-gradient(
 
 .footer-twitter-element-text {
   margin-bottom: 10px;
-
   .text-link {
     color: #06b7e9;
-    text-decoration: none;
   }
 }
 
@@ -1014,8 +858,7 @@ $background-gradient: linear-gradient(
   padding: 45px 0;
   background: #111111;
   .wrapper {
-    display: flex;
-    align-items: center;
+    @include display-flex;
   }
 }
 
@@ -1029,23 +872,19 @@ $background-gradient: linear-gradient(
 
 .copyrights,
 .copyright-list-element {
+  @include subtitles-text;
   margin-right: 12px;
   margin-bottom: 20px;
-  font-family: $motserrat;
-  font-weight: 300;
   font-size: 13px;
   color: $titles;
-  list-style: none;
 }
 
 .copyright-list-element {
   text-align: center;
   a {
-    font-family: $motserrat;
-    font-weight: 300;
+    @include subtitles-text;
     font-size: 13px;
     color: $titles;
-    text-decoration: none;
   }
 }
 
@@ -1080,7 +919,7 @@ $background-gradient: linear-gradient(
     width: 450px;
   }
 
-  .navigation-link {
+  .navigation-link-container {
     width: 15%;
   }
 
@@ -1097,10 +936,8 @@ $background-gradient: linear-gradient(
 
   .hero {
     height: 800px;
-    .slider {
-      .slider {
-        margin-bottom: 150px;
-      }
+    .slider-container {
+      margin-bottom: 150px;
     }
   }
 
@@ -1174,7 +1011,7 @@ $background-gradient: linear-gradient(
 
   .footer-about,
   .footer-posts {
-    margin: 0 100px 0 100px;
+    margin: 0 100px;
   }
 
   .footer-posts,
@@ -1219,7 +1056,7 @@ $background-gradient: linear-gradient(
   .hero {
     height: 700px;
     .slider {
-      .slider {
+      .slider-container {
         margin-bottom: 100px;
       }
     }
@@ -1394,7 +1231,7 @@ $background-gradient: linear-gradient(
     height: 500px;
   }
 
-  .services-list-element{
+  .services-list-element {
     width: 100%;
     .services-element-subtitle {
       max-width: 340px;
@@ -1429,10 +1266,12 @@ $background-gradient: linear-gradient(
     flex-direction: column;
     width: 100%;
   }
+
   .logos-list-element {
     margin: 0 0 50px 0;
     width: 50%;
   }
+
   .footer-widget,
   .logos-list-element:nth-of-type(3),
   .logos-list-element:nth-of-type(4),
@@ -1443,28 +1282,23 @@ $background-gradient: linear-gradient(
 
   .copyright {
     .wrapper {
+      @include display-flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
   }
 
   .copyright-list-left,
   .copyright-list-right {
+    @include display-flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0;
   }
 }
 
 @media (max-width: 360px) {
-
   .logos-list-element {
+    @include display-flex;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .logos-element-image {
