@@ -351,7 +351,7 @@ ul li {
   font-size: 14px;
   color: #8c8c8c;
   max-width: 800px;
-  margin: auto auto 33px auto;
+  margin-bottom: 33px;
   font-size: 16px;
   line-height: 28px;
 }

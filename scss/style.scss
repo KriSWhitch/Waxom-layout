@@ -14,6 +14,7 @@ $subtitles: #8c8c8c;
 $titles: #555555;
 $background-light: #fbfaf8;
 $black-light: #252525;
+$dark: #363636;
 $background-gradient: linear-gradient(
   90deg,
   rgba(33, 27, 25, 1) 0%,
@@ -358,7 +359,7 @@ ul {
 .projects-subtitle {
   @include subtitles-text;
   max-width: 800px;
-  margin: auto auto 33px auto;
+  margin-bottom: 33px;
   font-size: 16px;
   line-height: 28px;
 }
@@ -680,7 +681,7 @@ ul {
   padding: 7px;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
-  background: #363636;
+  background: $dark;
   .date-title {
     @include subtitles-text;
     font-size: 24px;
@@ -803,7 +804,7 @@ ul {
   @include subtitles-text;
   margin-bottom: 10px;
   font-size: 12px;
-  color: #363636;
+  color: $dark;
 }
 
 .footer-posts-element-text,
