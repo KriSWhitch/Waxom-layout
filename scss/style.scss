@@ -1125,10 +1125,6 @@ ul {
     height: 800px;
   }
 
-  .py-33 {
-    padding: 33px 0;
-  }
-
   .video-presentation {
     padding: 50px 0;
   }
@@ -1140,6 +1136,10 @@ ul {
   }
   .medium-tablets-dspl-none {
     display: none;
+  }
+
+  .medium-tablets-py-33 {
+    padding: 33px 0;
   }
 
   .text-boxes {
@@ -1214,10 +1214,6 @@ ul {
     }
   }
 
-  .my-5perc-mr-10 {
-    margin: 0 5% 10px 5%;
-  }
-
   .posts-element-text {
     padding-left: 0;
   }
@@ -1234,6 +1230,10 @@ ul {
 
   .small-tablets-dspl-none {
     display: none;
+  }
+
+  .small-tablets-my-5perc-mr-10 {
+    margin: 0 5% 10px 5%;
   }
 
   .copyright {

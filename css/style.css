@@ -1167,10 +1167,6 @@ ul li {
     height: 800px;
   }
 
-  .py-33 {
-    padding: 33px 0;
-  }
-
   .video-presentation {
     padding: 50px 0;
   }
@@ -1181,6 +1177,10 @@ ul li {
 
   .medium-tablets-dspl-none {
     display: none;
+  }
+
+  .medium-tablets-py-33 {
+    padding: 33px 0;
   }
 
   .text-boxes .wrapper {
@@ -1251,10 +1251,6 @@ ul li {
     width: 100%;
   }
 
-  .my-5perc-mr-10 {
-    margin: 0 5% 10px 5%;
-  }
-
   .posts-element-text {
     padding-left: 0;
   }
@@ -1271,6 +1267,10 @@ ul li {
 
   .small-tablets-dspl-none {
     display: none;
+  }
+
+  .small-tablets-my-5perc-mr-10 {
+    margin: 0 5% 10px 5%;
   }
 
   .copyright .wrapper {
