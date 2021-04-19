@@ -9,13 +9,11 @@ a {
   text-decoration: none;
 }
 
-.margin-auto,
-.wrapper {
+.margin-auto {
   margin: auto;
 }
 
-.position-relative,
-.wrapper {
+.position-relative {
   position: relative;
 }
 
@@ -56,6 +54,18 @@ ul li {
   cursor: pointer;
 }
 
+.mg-r-30 {
+  margin-right: 30px;
+}
+
+.mg-t-25 {
+  margin-top: 25px;
+}
+
+.d-flex {
+  display: flex;
+}
+
 .title-template {
   margin-bottom: 20px;
   font-size: 30px;
@@ -72,9 +82,6 @@ ul li {
 .header {
   margin-bottom: 235px;
   padding: 40px 0;
-}
-.header .wrapper {
-  display: flex;
 }
 
 .header-logotype-link {
@@ -108,14 +115,6 @@ ul li {
   justify-content: center;
   align-items: center;
   padding-left: 0;
-}
-
-.header-button:first-of-type,
-.navigation-link-container,
-.footer-about,
-.footer-posts,
-.footer-twitter {
-  margin-right: 30px;
 }
 
 .navigation-link {
@@ -307,7 +306,6 @@ ul li {
   background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
 }
 .text-boxes .wrapper {
-  display: flex;
   align-items: center;
 }
 
@@ -597,8 +595,7 @@ ul li {
   margin: 0;
 }
 
-.list-element-image,
-.footer-about-logo {
+.mg-b-25 {
   margin-bottom: 25px;
 }
 
@@ -785,17 +782,8 @@ ul li {
   background: #191919;
 }
 
-.footer-container {
-  display: flex;
-}
 .footer-container li {
   list-style: none;
-}
-
-.footer-posts,
-.footer-twitter,
-.footer-widget {
-  margin-top: 25px;
 }
 
 .footer-about-subtitle {
@@ -829,17 +817,14 @@ ul li {
   color: #c7b299;
 }
 
-.footer-posts-title,
-.footer-twitter-title,
-.footer-widget-title {
+.footer-title-template {
   margin-bottom: 30px;
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: bold;
   font-size: 24px;
 }
 
-.footer-posts-element-date,
-.footer-twitter-element-date {
+.footer-element-date-template {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -849,8 +834,7 @@ ul li {
   color: #363636;
 }
 
-.footer-posts-element-text,
-.footer-twitter-element-text {
+.footer-element-text-template {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -860,8 +844,7 @@ ul li {
   color: #555555;
 }
 
-.footer-posts-element-line,
-.footer-twitter-element-line {
+.footer-element-line-template {
   display: inline-block;
   height: 1px;
   width: 270px;
@@ -891,7 +874,6 @@ ul li {
 }
 
 .footer-widget-list {
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -909,17 +891,11 @@ ul li {
   align-items: center;
 }
 
-.copyright-list-left,
-.copyright-list-right {
-  display: flex;
-}
-
 .copyright-list-left {
   margin-right: 400px;
 }
 
-.copyrights,
-.copyright-list-element {
+.copyright-text-template {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
