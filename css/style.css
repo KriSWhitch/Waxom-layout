@@ -1090,15 +1090,7 @@ ul li {
     margin-bottom: 60px;
   }
 
-  .header-navigation,
-  .header-buttons-group,
-  .slider-arrow,
-  .tagline-browser-left,
-  .tagline-browser-right,
-  .table-element:nth-of-type(5),
-  .table-element:nth-of-type(6),
-  .advantages-list-element:nth-of-type(5),
-  .mobile-image {
+  .dspl-none-1000 {
     display: none;
   }
 
@@ -1175,12 +1167,7 @@ ul li {
     height: 800px;
   }
 
-  .services,
-  .tagline,
-  .text-boxes,
-  .projects,
-  .posts,
-  .footer-wrapper {
+  .py-33 {
     padding: 33px 0;
   }
 
@@ -1192,9 +1179,7 @@ ul li {
     margin-bottom: 0;
   }
 
-  .tagline-browser-container,
-  .table-element:nth-of-type(3),
-  .table-element:nth-of-type(4) {
+  .dspl-none-800 {
     display: none;
   }
 
@@ -1266,11 +1251,7 @@ ul li {
     width: 100%;
   }
 
-  .table-element-title,
-  .table-element-subtitle,
-  .posts-element-title,
-  .posts-element-subtitle,
-  .posts-element-link {
+  .my-5perc-mr-10 {
     margin: 0 5% 10px 5%;
   }
 
@@ -1288,11 +1269,7 @@ ul li {
     width: 50%;
   }
 
-  .footer-widget,
-  .logos-list-element:nth-of-type(3),
-  .logos-list-element:nth-of-type(4),
-  .services-list-element:nth-of-type(3),
-  .services-list-element:nth-of-type(4) {
+  .dspl-none-680 {
     display: none;
   }
 
