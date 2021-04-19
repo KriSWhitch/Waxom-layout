@@ -1090,7 +1090,7 @@ ul li {
     margin-bottom: 60px;
   }
 
-  .dspl-none-1000 {
+  .large-tablets-dspl-none {
     display: none;
   }
 
@@ -1179,7 +1179,7 @@ ul li {
     margin-bottom: 0;
   }
 
-  .dspl-none-800 {
+  .medium-tablets-dspl-none {
     display: none;
   }
 
@@ -1269,7 +1269,7 @@ ul li {
     width: 50%;
   }
 
-  .dspl-none-680 {
+  .small-tablets-dspl-none {
     display: none;
   }
 
